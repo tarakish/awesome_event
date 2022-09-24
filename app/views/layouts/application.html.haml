@@ -13,7 +13,7 @@
         = link_to "AwesomeEvents", root_path, class: "navbar-brand"
         %ul.navbar-nav
           %li.nav-item
-            = link_to "イベントを作る", new_event_path, class: 'nav-list'
+            = link_to "イベントを作る", new_event_path, class: 'nav-link'
           - if logged_in?
             %li.nav-item
               = link_to 'ログアウト', logout_path, class: 'nav-link', method: :delete
