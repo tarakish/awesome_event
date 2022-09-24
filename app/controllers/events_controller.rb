@@ -1,4 +1,10 @@
 class EventsController < ApplicationController
+  skip_before_action :authenticate, onky: :show
+
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def new
     @event = current_user.created_events.build
   end
