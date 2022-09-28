@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2022_09_24_201433) do
     t.string "image_url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"provider\", \"uuid\"", name: "index_users_on_provider_and_uuid", unique: true
+    t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
   end
 
   add_foreign_key "tickets", "events"
