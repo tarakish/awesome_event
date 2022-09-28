@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy', as: :logout
 
   resource :retirements
-
   resources :events do
     resources :tickets
   end
+
+  get 'status', to: 'status#index', defaults: { format: 'json' }
 end
