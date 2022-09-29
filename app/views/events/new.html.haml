@@ -20,5 +20,8 @@
       = f.datetime_select :end_at, start_year: now.year, end_year: now.year + 1
   .form-group
     = f.label :content
-    = f.text_field :content , class: 'form-control', row: 10
+    = f.text_area :content , class: 'form-control', row: 10
+  .form-group
+    = f.label :image
+    = f.file_field :image, class: 'form-control-file'
   = f.submit class: 'btn btn-primary'
