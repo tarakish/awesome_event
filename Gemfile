@@ -30,6 +30,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Haml
 gem 'hamlit-rails', '~> 0.2.3'
 
+# For Paginate
+gem 'kaminari', '~> 1.2.0'
+
 # use OmniAuth
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-github', '~> 1.4.0'
