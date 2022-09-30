@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: :logout
 
-  resource :retirements
-  resources :events do
-    resources :tickets
+  resource :retirements, only: %i[new create]
+  resources :events, only: %i[new create show editt update destroy] do
+    resources :tickets, only: %i[new create destroy]
   end
 
   get 'status', to: 'status#index', defaults: { format: 'json' }
